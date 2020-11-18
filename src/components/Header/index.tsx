@@ -31,7 +31,7 @@ const Header: React.FC<IHeaderProps> = ({
 
   return (
     <Container fixed={fixed}>
-      <Name>
+      <Name onClick={() => handleNavigateTo('/')}>
         <img src={logo} alt="" />
         <strong>Carlos Henrique</strong>
       </Name>

@@ -10,8 +10,6 @@ interface IPageProps {
 }
 
 export const Container = styled.header<IContainerProps>`
-  margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,6 +45,8 @@ export const Container = styled.header<IContainerProps>`
 export const Name = styled.div`
   display: flex;
   align-items: center;
+
+  cursor: pointer;
 
   img {
     width: 30px;
