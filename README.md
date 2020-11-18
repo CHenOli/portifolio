@@ -27,3 +27,7 @@ A nice and clean portifolio developed by me. I got inspiration from this project
 <br />
 
 ![Landing Page](https://i.imgur.com/Vx9m11v.png)
+
+<br />
+
+![Landing Page](https://i.imgur.com/leW1dxq.png)
