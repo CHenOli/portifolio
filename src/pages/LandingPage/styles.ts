@@ -11,6 +11,17 @@ export const Container = styled.div`
 
   min-width: 100vw;
   min-height: 900px;
+
+  animation: smooth-appearance 0.7s ease;
+
+  @keyframes smooth-appearance {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 export const Main = styled.main`
@@ -59,12 +70,24 @@ export const Right = styled.section`
   align-items: center;
   justify-content: flex-end;
 
+  position: relative;
+
   background: url(${ellipse}) no-repeat center;
   background-size: 80% 80%;
 
   @media (max-width: 1200px) {
     display: none;
   }
+`;
+
+export const Sign = styled.img`
+  height: 70px;
+
+  cursor: pointer;
+  position: absolute;
+
+  right: 32px;
+  bottom: 64px;
 `;
 
 export const Image = styled.img`

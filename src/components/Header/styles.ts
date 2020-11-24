@@ -106,14 +106,36 @@ export const Page = styled.button<IPageProps>`
     selected
       ? css`
           color: #78d0d3;
-          border-bottom: solid 2px #78d0d3;
         `
       : css`
           color: ${isBlack ? '#1b1c1e' : '#fff'};
-          border-bottom: solid 2px transparent;
 
           @media (max-width: 960px) {
             color: #1b1c1e;
           }
         `}
+
+  div {
+    width: 0;
+    height: 3px;
+    margin-top: 8px;
+    background: #78d0d3;
+
+    ${({ selected }) =>
+      selected &&
+      css`
+        width: 100%;
+
+        animation: smooth-width 0.6s;
+
+        @keyframes smooth-width {
+          0% {
+            width: 0;
+          }
+          100% {
+            width: 100%;
+          }
+        }
+      `}
+  }
 `;

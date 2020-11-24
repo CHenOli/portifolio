@@ -41,21 +41,24 @@ const Header: React.FC<IHeaderProps> = ({
           selected={selectedPage === 'LANDING'}
           onClick={() => handleNavigateTo('/')}
         >
-          Início
+          <span>Início</span>
+          <div />
         </Page>
         <Page
           isBlack={color === 'BLACK'}
           selected={selectedPage === 'PROJECTS'}
           onClick={() => handleNavigateTo('/projects')}
         >
-          Projetos
+          <span>Projetos</span>
+          <div />
         </Page>
         <Page
           isBlack={color === 'BLACK'}
           selected={selectedPage === 'CONTACT'}
           onClick={() => handleNavigateTo('/contact')}
         >
-          Contato
+          <span>Contato</span>
+          <div />
         </Page>
       </Pages>
       <FiMenu size={24} onClick={onMenuShown} />
