@@ -1,9 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import ellipse from '../../assets/ellipse.svg';
 import topRight from '../../assets/top-right.svg';
 import bottomLeft from '../../assets/bottom-left.svg';
 import bottomRight from '../../assets/bottom-right.svg';
+
+const titleAnimation = keyframes`
+  from {
+    width: 0;
+    opacity: 0;
+  }
+`;
 
 export const Container = styled.div`
   width: 100vw;
@@ -104,19 +111,53 @@ export const Title = styled.strong`
   font-size: 80px;
   line-height: 90px;
 
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #78d0d3;
+    opacity: 0.75;
+    height: 40px;
+    width: 475px;
+    bottom: 16px;
+    left: -10px;
+    z-index: -1;
+    animation: ${titleAnimation} 1s ease-out;
+  }
+
   @media (max-width: 1500px) {
     font-size: 60px;
     line-height: 70px;
+
+    &:before {
+      left: -5px;
+      bottom: 5px;
+      width: 355px;
+    }
   }
 
   @media (max-width: 520px) {
     font-size: 40px;
     line-height: 50px;
+
+    display: block;
+    width: 280px;
+    bottom: 0;
+
+    &:before {
+      left: -5px;
+      height: 20px;
+      width: 240px;
+    }
   }
 `;
 
 export const Description = styled.div`
   color: #aba6b2;
+
+  margin-top: 32px;
 `;
 
 export const Button = styled.button`
